@@ -1,0 +1,117 @@
+/*
+                                        Database
+             Relational(RDBMS)             |                      Non-relational (NoSQL)
+            (Data stores in table)         |                 (Data not stored in tables)
+                                           |
+Example:    MySQL, Oracle, SQL Server,     |                   Example: MongoDB
+            PostgreSQL                     |
+
+
+*** We use Structured Query Language(SQL) to work with RDBMS
+
+*/
+
+// SQL --> Programming language used to interact with relational databases.
+
+
+
+/*---------------------------------------DataTypes---------------------------------------*/
+
+/*  Text  */
+    1. CHAR(n)       --> Fixed length
+    2. VARCHAR(n)    --> Variable length
+    3. TINYTEXT(n)   --> Short text
+    4. TEXT(n)       --> Medium text
+    5. MEDIUMTEXT(n) --> Large text
+    6. LONGTEXT(n)   --> Very Large text
+    7. BLOB(n)       --> Binary Data(Images, Videos)
+
+
+/*  Int  */
+    1. TINYINT    --> 1 byte
+    2. SMALLINT   --> 2 bytes
+    3. MEDIUMINT  --> 3 bytes
+    4. INT        --> 4 bytes
+    5. BIGINT     --> 8 bytes
+
+
+/*  Decimal  */
+    1. DECIMAL(n,d) -> d digits after decimal point
+    2. FLOAT(n,d)  --> 4 bytes
+    3. DOUBLE(n,d) --> 8 bytes
+
+/*  Date & Time  */
+    1. DATE       --> YYYY-MM-DD
+    2. DATETIME   --> YYYY-MM-DD + HH:MM:SS
+    3. TIMESTAMP  --> Similar to DATETIME, but updates automatically 
+    4. TIME       --> HH:MM:SS
+    5. YEAR       --> YYYY
+
+
+
+/*-------------------------------------Create a Table-------------------------------------*/
+CREATE TABLE students(
+	StudentID INT AUTO_INCREMENT primary key,
+    Name VARCHAR(100),
+    Age TINYINT,
+    Email VARCHAR(100),
+    JoinDate DATE
+);
+
+// View of Table ---> SELECT * FROM table_name;
+
+// Insert value into table
+INSERT INTO table_name(name, age, email, ...)
+VALUES
+('Sourav', 20, 'ROY.com', ...),
+('Rancho', 38, 'WANGRU.com', ...);
+
+
+
+// Delete table --> DROP TABLE table_name
+
+
+
+
+
+/*----------------Operations on Table----------------*/
+
+ALTER TABLE table_name
+/*
+    Add a column     --> ADD  COLUMN  column_name  column_datatype
+    Change datatype  --> MODIFY  column_name  column_datatype
+    Rename of column --> RENAME  COLUMN  curr_column_name  TO  change_column_name
+*/
+
+
+// Remove all the fields --> TRUNCATE TABLE table_name
+
+
+
+
+
+
+/*------------------------------------ CRUD Operation ------------------------------------*/
+
+// Filtering Data ---> WHERE, AND, OR, NOT
+
+1.) SELECT * FROM table_name WHERE column_name LIKE '%ASKING_NAME%'
+2.) SELECT * FROM table_name WHERE column_name='need_actual_name' ;
+3.) SELECT * FROM table_name WHERE column_name NOT LIKE '%ASKING_NAME_1%' AND column_name NOT LIKE '%ASKING_NAME_2%'
+
+
+/*------------------------------------------Update------------------------------------------*/
+
+UPDATE table_name
+SET Coulmn_1 = Value_1, Column_2 = Value_2, ...
+WHERE Condition;
+
+/*------------------------------------------DELETE------------------------------------------*/
+DELETE FROM table_name
+WHERE column_name = Value
+
+
+// Sorting --> ORDER BY
+SELECT * FROM table_name ORDER BY column_name_1 ASC, column_name_2 DESC
+
+// Time --> 2:00:00
