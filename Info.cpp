@@ -114,4 +114,23 @@ WHERE column_name = Value
 // Sorting --> ORDER BY
 SELECT * FROM table_name ORDER BY column_name_1 ASC, column_name_2 DESC
 
-// Time --> 2:00:00
+
+
+/*--------------------------------Aggregtion & Grouping Data--------------------------------*/
+
+Sum ------->   SELECT SUM(column_name) FROM table_name ;
+
+Count ----->   SELECT COUNT(column_name) FROM table_name WHERE condition ;
+
+Average --->   SELECT AVG(column_name) FROM table_name ;
+
+Minimum/ Maximum --> SELECT Min(column_name), Max(column_name) FROM table_name;
+
+    // Group By
+        SELECT category, SUM(amount) FROM Sales
+        GROUP BY column_name;
+
+    // Having
+    SELECT category, SUM(amount) FROM Sales
+    GROUP BY column_name
+    HAVING Condition;  // Example condition --> SUM(amount) > 1000, // As we are doing work with groups so we need to use 'HAVING' instead of 'WHERE'
