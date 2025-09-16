@@ -51,7 +51,7 @@ Example:    MySQL, Oracle, SQL Server,     |                   Example: MongoDB
 
 /*-------------------------------------Create a Table-------------------------------------*/
 CREATE TABLE students(
-	StudentID INT AUTO_INCREMENT primary key,
+	StudentID INT AUTO_INCREMENT PRIMARY KEY,
     Name VARCHAR(100),
     Age TINYINT,
     Email VARCHAR(100),
@@ -60,7 +60,7 @@ CREATE TABLE students(
 
 // View of Table ---> SELECT * FROM table_name;
 
-// Insert value into table
+// Insert value into table     <--OR-->     Add a new Row
 INSERT INTO table_name(name, age, email, ...)
 VALUES
 ('Sourav', 20, 'ROY.com', ...),
@@ -78,7 +78,7 @@ VALUES
 
 ALTER TABLE table_name
 /*
-    Add a column     --> ADD  COLUMN  column_name  column_datatype
+    Add a column     --> ADD  column_name  column_datatype
     Change datatype  --> MODIFY  column_name  column_datatype
     Rename of column --> RENAME  COLUMN  curr_column_name  TO  change_column_name
 */
@@ -91,7 +91,7 @@ ALTER TABLE table_name
 
 
 
-/*------------------------------------ CRUD Operation ------------------------------------*/
+/*--------------------------------- CRUD Operation ---------------------------------*/
 
 // Filtering Data ---> WHERE, AND, OR, NOT
 
@@ -100,13 +100,13 @@ ALTER TABLE table_name
 3.) SELECT * FROM table_name WHERE column_name NOT LIKE '%ASKING_NAME_1%' AND column_name NOT LIKE '%ASKING_NAME_2%'
 
 
-/*------------------------------------------Update------------------------------------------*/
+/*------------------------------------- Update -------------------------------------*/
 
 UPDATE table_name
 SET Coulmn_1 = Value_1, Column_2 = Value_2, ...
-WHERE Condition;
+WHERE provide_condition;
 
-/*------------------------------------------DELETE------------------------------------------*/
+/*------------------------------------- DELETE -------------------------------------*/
 DELETE FROM table_name
 WHERE column_name = Value
 
@@ -116,7 +116,7 @@ SELECT * FROM table_name ORDER BY column_name_1 ASC, column_name_2 DESC
 
 
 
-/*--------------------------------Aggregtion & Grouping Data--------------------------------*/
+/*--------------------------- Aggregation & Grouping Data ---------------------------*/
 
 Sum ------->   SELECT SUM(column_name) FROM table_name ;
 
@@ -125,12 +125,12 @@ Count ----->   SELECT COUNT(column_name) FROM table_name WHERE condition ;
 Average --->   SELECT AVG(column_name) FROM table_name ;
 
 Minimum/ Maximum --> SELECT Min(column_name), Max(column_name) FROM table_name;
-
+ 
     // Group By
-        SELECT category, SUM(amount) FROM Sales
+        SELECT column_name, SUM(amount) FROM Sales
         GROUP BY column_name;
 
     // Having
-    SELECT category, SUM(amount) FROM Sales
+    SELECT column_name, SUM(amount) FROM Sales
     GROUP BY column_name
     HAVING Condition;  // Example condition --> SUM(amount) > 1000, // As we are doing work with groups so we need to use 'HAVING' instead of 'WHERE'
