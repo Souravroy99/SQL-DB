@@ -17,4 +17,4 @@ ALTER TABLE table_name DROP COLUMN column_name
 
 
 // Rename Table
-ALTER TABLE table_name RENAME TO new_table_name
+ALTER TABLE table_name  RENAME  TO  new_table_name
