@@ -94,10 +94,14 @@ ALTER TABLE table_name
 /*--------------------------------- CRUD Operation ---------------------------------*/
 
 // Filtering Data ---> WHERE, AND, OR, NOT
+// % --> Wildcard
 
 1.) SELECT * FROM table_name WHERE column_name LIKE '%ASKING_NAME%'
 2.) SELECT * FROM table_name WHERE column_name='need_actual_name' ;
 3.) SELECT * FROM table_name WHERE column_name NOT LIKE '%ASKING_NAME_1%' AND column_name NOT LIKE '%ASKING_NAME_2%'
+
+    /* Select all records where the second letter of the City is an "a" */
+    ANS ---> SELECT * FROM table_name WHERE column_name LIKE "_a%" ;
 
 
 /*------------------------------------- Update -------------------------------------*/
@@ -124,7 +128,7 @@ Count ----->   SELECT COUNT(column_name) FROM table_name WHERE condition ;
 
 Average --->   SELECT AVG(column_name) FROM table_name ;
 
-Minimum/ Maximum --> SELECT Min(column_name), Max(column_name) FROM table_name;
+Minimum/ Maximum --> SELECT MIN(column_name), MAX(column_name) FROM table_name;
  
     // Group By
         SELECT column_name, SUM(amount) FROM Sales
