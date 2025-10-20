@@ -138,3 +138,13 @@ Minimum/ Maximum --> SELECT MIN(column_name), MAX(column_name) FROM table_name;
     SELECT column_name, SUM(amount) FROM Sales
     GROUP BY column_name
     HAVING Condition;  // Example condition --> SUM(amount) > 1000, // As we are doing work with groups so we need to use 'HAVING' instead of 'WHERE'
+
+
+
+/*------------------------------------- String OP -------------------------------------*/
+SET @strtng_1 = 'AB';
+SET @strtng_2 = 'CD';
+SET @strtng_3 = 'EF';
+
+SELECT CONCAT(@strtng_1, @strtng_2, @strtng_3) AS s ;
+// LOWER(SUBSTRING(@string1, start_index, length)) ; // In MySQL string indexing starts from 1 not 0
