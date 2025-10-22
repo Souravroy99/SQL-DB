@@ -114,6 +114,11 @@ WHERE provide_condition;
 DELETE FROM table_name
 WHERE column_name = Value
 
+    // --------------------
+    DELETE T1 FROM table_name T1
+    JOIN table_name T2 ON T1.row = T2.row
+    WHERE Condition
+
 
 // Sorting --> ORDER BY
 SELECT * FROM table_name ORDER BY column_name_1 ASC, column_name_2 DESC
