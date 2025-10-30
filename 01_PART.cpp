@@ -84,10 +84,19 @@ ALTER TABLE table_name
 */
 
 
-// Remove all the fields --> TRUNCATE TABLE table_name
 
 
 
+/*----------------------Remove all the fields----------------------*/
+
+// Instantly removes all rows by deallocating the table’s storage pages (Much faster).
+    TRUNCATE TABLE table_name;	
+
+// Deletes rows one by one, logging each deletion.
+    DELETE FROM table_name;	
+
+    
+    
 
 
 

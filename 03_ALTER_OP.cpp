@@ -13,11 +13,6 @@ ALTER TABLE table_name
 DROP COLUMN column_name
 
 
-// Rename Table
-ALTER TABLE table_name  RENAME  TO  new_table_name
-
-
-
 
 /* "RENAME"  VS  "MODIFY"  VS  "CHANGE" */
  
@@ -32,3 +27,10 @@ ALTER TABLE table_name  RENAME  TO  new_table_name
 // CHANGE:  Rename + Change type (CHANGE needs both old and new name + type)
     ALTER TABLE table_name 
     CHANGE COLUMN  old_column_name  new_column_name  new_data_type;
+
+
+
+
+// Rename Table
+ALTER TABLE table_name  
+RENAME  TO  new_table_name
