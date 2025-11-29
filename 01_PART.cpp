@@ -49,7 +49,7 @@ Example:    MySQL, Oracle, SQL Server,     |                   Example: MongoDB
 
 
 
-/*-------------------------------------Create a Table-------------------------------------*/
+/*---------------------------------Create a Table---------------------------------*/
 CREATE TABLE students(
 	StudentID INT AUTO_INCREMENT PRIMARY KEY,
     Name VARCHAR(100),
@@ -60,7 +60,7 @@ CREATE TABLE students(
 
 // View of Table ---> SELECT * FROM table_name;
 
-// Insert value into table     <--OR-->     Add a new Row
+// Insert value into table     <--OR-->      Add a new Row
 INSERT INTO table_name(name, age, email, ...)
 VALUES
 ('Sourav', 20, 'ROY.com', ...),
