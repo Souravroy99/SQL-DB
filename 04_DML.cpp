@@ -1,5 +1,5 @@
 // Update column value
-UPDATE table table_name  
+UPDATE table_name  
 SET  column_name_1="value_1", ... column_name_n="value_n"  
 WHERE ID = "VALUE"
 
